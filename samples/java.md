@@ -136,6 +136,5 @@ public class WebRedirection {
         return new String(Base64.getEncoder().encode(xor(value.getBytes(), key.getBytes())));
     }
 }
-
 ```
 

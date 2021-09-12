@@ -18,15 +18,15 @@ WebView Response Redirection
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter type="string" name="ecres" %}
+{% api-method-parameter type="string" name="ecres" required=true %}
 Encrypted parameters \(see below\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="resdate" type="string" %}
+{% api-method-parameter name="resdate" type="string" required=true %}
 format will be ddmmyyyyhh24misss UTC
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="fi" type="string" %}
+{% api-method-parameter name="fi" type="string" required=true %}
 Unique AA identifier. This will be encrypted using Base64/XOR along with resdate field
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -38,7 +38,7 @@ Unique AA identifier. This will be encrypted using Base64/XOR along with resdate
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -46,9 +46,9 @@ Unique AA identifier. This will be encrypted using Base64/XOR along with resdate
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### ecres \(encrypted path parameters\)
+## ecres \(encrypted path parameters\)
 
-Below are the parameters that will be encrypted using AES256 encryption algorithm 
+Below are the parameters that will be encrypted using AES256 encryption algorithm
 
 | **Parameter name** | **Parameter type** | **Parameter description** |
 | :--- | :--- | :--- |
@@ -59,7 +59,7 @@ Below are the parameters that will be encrypted using AES256 encryption algorith
 | errorcode | String | Refer the errorcodes table below |
 | srcref | String | The consent handle id received in the ecreq ‘srcref’ field |
 
-### Error codes
+## Error codes
 
 The following errorcodes are returned by the AA to FIU when the user is redirected back to the FIU application.
 
