@@ -16,8 +16,12 @@ WebView Endpoint
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter type="string" name="fi" required=true %}
-Unique FIU identifier. This will be encrypted using Base64/XOR along with **reqdate** field.
+{% api-method-parameter type="string" name="requestorId" required=true %}
+Unique requestor identifier. This will be encrypted using Base64/XOR along with **reqdate** field.
+{% endapi-method-parameter %}
+
+{% api-method-parameter type="ENUM" name="requestorType" required=true %}
+Type of the requestor. This field will hold the values - FIU & LSP. The ENUM field would be expanded to accommodate new participants for any future requirements.  This will be encrypted using Base64/XOR along with **reqdate** field.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="reqdate" required=true type="string" %}
@@ -54,7 +58,7 @@ Below are the parameters that will be encrypted using AES256 encryption algorith
 | sessionid | String | Value that represents a ‘state’ \(or session\) on the FIU end. This value is opaque to AA and will be returned as is to the FIU by AA in ecres sessionid field. |
 | userid | String | The AA user id \( Refer to A\] below \) |
 | redirect | String | FIU Url that AA needs to call back after the user has provided consent in the AA domain. The value of this parameter should be URL encoded if the value contains url parameters. This is required in order to remove ambiguity between the parameters of ecreq \(separated by ‘&’ character\) with the parameters in the redirect url. |
-| srcref | String | Consent handle id, as returned by AA server to the /Consent request api invoked by FIU on the AA prior to this redirection call. |
+| srcref | Array | Array of consent handle id(s), as returned by AA server to the /Consent request api invoked by the FIU(s) on the AA prior to this redirection call.|
 
 ## userid
 
