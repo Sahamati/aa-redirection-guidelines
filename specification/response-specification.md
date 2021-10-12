@@ -32,6 +32,12 @@ Unique AA identifier. This will be encrypted using Base64/XOR along with resdate
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
+{% api-method-parameter name="iv" type="string" required=true %}
+Base64 encoded random IV of 16 bytes. See java example for IV generation.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
@@ -53,11 +59,11 @@ Below are the parameters that will be encrypted using AES256 encryption algorith
 | **Parameter name** | **Parameter type** | **Parameter description** |
 | :--- | :--- | :--- |
 | txnid | String | UUID txnid \( To be sent back from the request \) |
-| sessionid | String | Value of sessionid received in the ‘ecreq’ field in the request. |
+| sessionid | String | Value of sessionid received in the 'ecreq' field in the request. |
 | userid | String | The AA user id |
-| status | String | The status ‘S’ for success and ‘F’ for failure |
+| status | String | The status 'S' for success and 'F' for failure |
 | errorcode | String | Refer the errorcodes table below |
-| srcref | String | The consent handle id received in the ecreq ‘srcref’ field |
+| srcref | String | The consent handle id received in the ecreq 'srcref' field |
 
 ## Error codes
 

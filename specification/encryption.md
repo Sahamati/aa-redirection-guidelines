@@ -11,10 +11,10 @@ description: Note about the encryption of data passed as URL parameters
 
 All encryption must be done using AES 256. For the AES 256 encryption below will be used:
 
-**IV** – This can be 0  
-**SALT** – This will be the reqdate or resdate  
-**FI** – This will be the unique FIU ID \( i.e. the FIU entity id \)  
-**SECRETKEY** – This will be the secret passphrase shared by the AA with the FIU.
+**IV** - This should be generated every time during encryption and sent in the iv url parameter  
+**SALT** - This will be the reqdate or resdate  
+**FI** - This will be the unique FIU ID \( i.e. the FIU entity id \)  
+**SECRETKEY** - This will be the 32 character secret passphrase shared by the AA with the FIU.
 
 ## References
 
