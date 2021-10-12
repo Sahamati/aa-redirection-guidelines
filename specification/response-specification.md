@@ -26,7 +26,7 @@ Encrypted parameters \(see below\)
 format will be ddmmyyyyhh24misss UTC
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="fi" type="string" required=true %}
+{% api-method-parameter name="requestorId" type="string" required=true %}
 Unique AA identifier. This will be encrypted using Base64/XOR along with resdate field
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -55,9 +55,16 @@ Below are the parameters that will be encrypted using AES256 encryption algorith
 | txnid | String | UUID txnid \( To be sent back from the request \) |
 | sessionid | String | Value of sessionid received in the ‘ecreq’ field in the request. |
 | userid | String | The AA user id |
+| srcref | Array consentHandleDetails | Consent handle details for the array of consents received in the ecreq ‘srcref’ field |
+
+## consentHandleDetails
+
+| **Parameter name** | **Parameter type** | **Parameter description** |
+| :--- | :--- | :--- |
+| consentHandle | String | Consent Handle ID |
 | status | String | The status ‘S’ for success and ‘F’ for failure |
-| errorcode | String | Refer the errorcodes table below |
-| srcref | String | The consent handle id received in the ecreq ‘srcref’ field |
+| errorcode | String | The response code : 0 if status is ‘S’ and others for failure (Refer to Error Codes table below) |
+
 
 ## Error codes
 
