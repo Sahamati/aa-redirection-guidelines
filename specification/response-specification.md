@@ -63,7 +63,7 @@ Below are the parameters that will be encrypted using AES256 encryption algorith
 | userid | String | The AA user id |
 | status | String | The status 'S' for success and 'F' for failure |
 | errorcode | String | Refer the errorcodes table below |
-| srcref | String | The consent handle id received in the ecreq â€˜srcrefâ€™ field |
+| srcref | String | The consent handle id received in the ecreq 'srcref' field |
 
 ## Error codes
 
