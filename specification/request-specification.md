@@ -54,10 +54,10 @@ Below are the parameters that will be encrypted using AES256 encryption algorith
 
 | **Parameter name** | **Parameter type** | **Parameter description** |
 | :--- | :--- | :--- |
-| txnid | String | UUID txnid. Uniquely identifies a particular redirection event. This same value will be returned by AA to FIU in the ecres txnid field. |
-| sessionid | String | Value that represents a ‘state’ \(or session\) on the FIU end. This value is opaque to AA and will be returned as is to the FIU by AA in ecres sessionid field. |
+| txnid | String | UUID txnid. Uniquely identifies a particular redirection event. This same value will be returned by AA to requestor in the ecres txnid field. |
+| sessionid | String | Value that represents a ‘state’ \(or session\) on the requestor end. This value is opaque to AA and will be returned as is to the requestor by AA in ecres sessionid field. |
 | userid | String | The AA user id \( Refer to A\] below \) |
-| redirect | String | FIU Url that AA needs to call back after the user has provided consent in the AA domain. The value of this parameter should be URL encoded if the value contains url parameters. This is required in order to remove ambiguity between the parameters of ecreq \(separated by ‘&’ character\) with the parameters in the redirect url. |
+| redirect | String | Requestor Url that AA needs to call back after the user has provided consent in the AA domain. The value of this parameter should be URL encoded if the value contains url parameters. This is required in order to remove ambiguity between the parameters of ecreq \(separated by ‘&’ character\) with the parameters in the redirect url. |
 | srcref | Array | Array of consent handle id(s), as returned by AA server to the /Consent request api invoked by the FIU(s) on the AA prior to this redirection call.|
 
 ## userid
