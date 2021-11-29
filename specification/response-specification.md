@@ -57,7 +57,7 @@ Below are the parameters that will be encrypted using AES256 encryption algorith
 | userid | String | The AA user id |
 | status | String | The status ‘S’ for success ( atleast one consent is approved ) and ‘F’ for failure ( all consents declined ) |
 | errorcode | String | The response code : 0 if status is ‘S’ and others for failure (Refer to Error Codes table below) |
-| srcref | Array | Array of accepted consent handle identifiers |
+| srcref | Array | Array of accepted consent handle identifiers only in case of LSP |
 
 ## Error codes
 
