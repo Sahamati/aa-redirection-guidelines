@@ -55,16 +55,9 @@ Below are the parameters that will be encrypted using AES256 encryption algorith
 | txnid | String | UUID txnid \( To be sent back from the request \) |
 | sessionid | String | Value of sessionid received in the ‘ecreq’ field in the request. |
 | userid | String | The AA user id |
-| srcref | Array consentHandleDetails | Consent handle details for the array of consents received in the ecreq ‘srcref’ field |
-
-## consentHandleDetails
-
-| **Parameter name** | **Parameter type** | **Parameter description** |
-| :--- | :--- | :--- |
-| consentHandle | String | Consent Handle ID |
 | status | String | The status ‘S’ for success and ‘F’ for failure |
 | errorcode | String | The response code : 0 if status is ‘S’ and others for failure (Refer to Error Codes table below) |
-
+| srcref | Array | Array of accepted consent handle identifiers |
 
 ## Error codes
 
