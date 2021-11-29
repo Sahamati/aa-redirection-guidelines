@@ -16,11 +16,11 @@ WebView Endpoint
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter type="string" name="requestorId" required=true %}
+{% api-method-parameter type="string" name="fi" required=true %}
 Unique requestor identifier. This will be encrypted using Base64/XOR along with **reqdate** field.
 {% endapi-method-parameter %}
 
-{% api-method-parameter type="ENUM" name="requestorType" required=true %}
+{% api-method-parameter type="ENUM" name="requestorType" required=false %}
 Type of the requestor. This field will hold the values - FIU & LSP. The ENUM field would be expanded to accommodate new participants for any future requirements.  This will be encrypted using Base64/XOR along with **reqdate** field.
 {% endapi-method-parameter %}
 
