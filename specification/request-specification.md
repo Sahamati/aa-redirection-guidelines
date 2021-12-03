@@ -6,7 +6,7 @@ description: Specification for redirection request from FIU to Account Aggregato
 
 ## **URL** Parameters
 
-> \\\* Required parameters
+> **\*** required parameters
 
 | Name              | Type   | Description                                                                                                                                                                                                                                                                                         |
 | ----------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -17,7 +17,7 @@ description: Specification for redirection request from FIU to Account Aggregato
 
 ## ecreq (encrypted path parameters)
 
-Below are the parameters that will be encrypted using AES256 encryption algorithm.
+Below are the required parameters that will be encrypted using AES256 encryption algorithm.
 
 | **Parameter name** | **Parameter type** | **Parameter description**                                                                                                                                                                                                                                                                                                                  |
 | ------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
