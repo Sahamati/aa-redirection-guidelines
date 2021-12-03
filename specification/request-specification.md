@@ -6,12 +6,14 @@ description: Specification for redirection request from FIU to Account Aggregato
 
 ## **URL** Parameters
 
-| Parameter Name | Type   | Description                                                                                                                                                                                                                                                                                         | Required |
-| -------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| fi             | String | Unique requestor identifier. This will be encrypted using Base64/XOR along with **reqdate** field.                                                                                                                                                                                                  | True     |
-| requestorType  | Enum   | Type of the requestor. This field will hold the values - FIU & LSP. The ENUM field would be expanded to accommodate new participants for any future requirements. This will be encrypted using Base64/XOR along with **reqdate** field.                                                             | False    |
-| reqdate        | String | **reqdate** field format will be ddmmyyyyhh24misss in UTC. For example, 06-Apr-2021, 10:40am and 756 milliseconds in IST should be formatted as 060420210510756 in UTC.The receiving server needs to validate this timestamp to be 180 secs of current time and beyond this request will be invalid | True     |
-| ecreq          | String | Base64 encoded & encrypted request parameters ([see details below](request-specification.md#ecreq-encrypted-path-parameters))                                                                                                                                                                       | True     |
+> \\\* Required parameters
+
+| Name              | Type   | Description                                                                                                                                                                                                                                                                                         |
+| ----------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **fi**\*          | String | Unique requestor identifier. This will be encrypted using Base64/XOR along with **reqdate** field.                                                                                                                                                                                                  |
+| **requestorType** | Enum   | Type of the requestor. This field will hold the values - FIU & LSP. The ENUM field would be expanded to accommodate new participants for any future requirements. This will be encrypted using Base64/XOR along with **reqdate** field.                                                             |
+| **reqdate**\*     | String | **reqdate** field format will be ddmmyyyyhh24misss in UTC. For example, 06-Apr-2021, 10:40am and 756 milliseconds in IST should be formatted as 060420210510756 in UTC.The receiving server needs to validate this timestamp to be 180 secs of current time and beyond this request will be invalid |
+| **ecreq**\*       | String | Base64 encoded & encrypted request parameters ([see details below](request-specification.md#ecreq-encrypted-path-parameters))                                                                                                                                                                       |
 
 ## ecreq (encrypted path parameters)
 
