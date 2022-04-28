@@ -55,6 +55,7 @@ Below are the parameters that will be encrypted using AES256 encryption algorith
 | userid | String | The AA user id \( Refer to A\] below \) |
 | redirect | String | FIU Url that AA needs to call back after the user has provided consent in the AA domain. The value of this parameter should be URL encoded if the value contains url parameters. This is required in order to remove ambiguity between the parameters of ecreq \(separated by ‘&’ character\) with the parameters in the redirect url. |
 | srcref | String | Consent handle id, as returned by AA server to the /Consent request api invoked by FIU on the AA prior to this redirection call. |
+| fipid | Array | Optional, can be blank. If FIU already has the information that citizen wants to discover accounts of a particular FIP beforehand, then they can pass this info to AA as a comma separated array in curly braces. It saves user clicks and enhances journey experience|
 
 ## userid
 
